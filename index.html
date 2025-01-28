@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notes</title>
+
+    <style>
+      #container {
+        border: 2px solid black;
+        height: 500px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"><h1>hi</h1></div>
+
+    <button id="b1">click</button>
+    <button onclick="show()">click me</button>
+    <script>
+      //variable declaration
+      var a = 12;
+      let b = "ajay";
+      const c = [1, 2, "ajay", 4, 5];
+      const d = {
+        name: "ajay",
+        age: 21,
+        address: "kamothe navi mumbai",
+      };
+
+      console.log(a);
+      console.log(b);
+      //hoisting in variable
+      e = 23;
+      console.log(e);
+      var e;
+      //conditional statement
+      //ifelse
+      if (a < 10) {
+        console.log("a less than 10");
+      } else {
+        console.log("a is greater than 10");
+      }
+
+      //if-else-if
+      var age = 60;
+
+      if (age < 18) {
+        console.log("minor");
+      } else if (age >= 18 && age <= 60) {
+        console.log("adult");
+      } else {
+        console.log("senior");
+      }
+      //switch case
+      var day = 7;
+      switch (day) {
+        case 1:
+          console.log("monday");
+          break;
+
+        case 2:
+          console.log("tuesday");
+          break;
+
+        case 3:
+          console.log("wednesday");
+          break;
+
+        case 4:
+          console.log("thursday");
+          break;
+
+        case 5:
+          console.log("friday");
+          break;
+
+        case 6:
+          console.log("saturday");
+          break;
+
+        case 7:
+          console.log("sunday");
+          break;
+
+        default:
+          console.log("please enter valid input");
+      }
+
+      //loops
+      //while
+      let i = 1;
+      while (i < 10) {
+        console.log(i);
+        i++;
+      }
+      //do while
+
+      let j = 1;
+      do {
+        console.log(j);
+        j++;
+      } while (j < 10);
+
+      //for
+
+      for (let k = 1; k < 10; k++) {
+        console.log(k);
+      }
+      //for in
+      for (l in d) {
+        console.log(l + "=" + d[l]);
+      }
+
+      //for of
+      for (l of c) {
+        console.log(l);
+      }
+
+      //for each
+
+      c.forEach((element) => {
+        console.log(element);
+      });
+
+      //map
+      let doubled = c.map((num) => num * 2);
+      console.log(doubled);
+
+      //ternary operator
+      let con = 12;
+      console.log(con < 10 ? "less than 10" : "greater than 10");
+
+      //function declaration with hoisting
+      myfun();
+      function myfun() {
+        console.log("hello world");
+      }
+
+      //bom
+
+      alert("sani");
+      confirm("confirm password");
+      prompt("enter your name");
+
+      // event handle
+      function show() {
+        alert(" button clicked");
+      }
+
+      //logical operator
+      let p = 10;
+      let q = 20;
+      if (p == 10 && q == 20) {
+        console.log(" both are true");
+      }
+      if (p == 10 || q == 20) {
+        console.log(" both are true or one of them is true");
+        0;
+      }
+      var r = !p == 10;
+      console.log(r);
+
+      //event listener
+
+      const btn = document.getElementById("b1"); //selection
+      const div = document.querySelector("#container"); //selection
+      btn.addEventListener("click", () => {
+        div.style.backgroundColor = "red"; //changing css
+        div.innerHTML = "red"; //changing html
+      });
+
+      //array method
+      c.push(6);
+      console.log(c);
+      c.pop();
+      console.log(c);
+      console.log(c.reverse());
+      console.log(c.slice(1, 3));
+      console.log(c.splice(1, 3, 20, 30));
+      console.log(c);
+    </script>
+  </body>
+</html>
